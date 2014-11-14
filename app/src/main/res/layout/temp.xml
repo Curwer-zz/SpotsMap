@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hidden_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="fill"
+    android:background="@android:color/holo_purple">
+
+
+    <TextView
+        android:id="@+id/marker_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="Test"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:textColor="@android:color/white"
+        android:background="#55000000"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <net.eray.spotsmap.FitImageView
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spotImage"
+        android:layout_below="@+id/marker_title"
+        />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/spotImage"
+        android:layout_centerHorizontal="true" >
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Uploader: "
+                android:id="@+id/uplaoderName"
+                android:textColor="#000000"
+                android:background="@drawable/edittextleft"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="420Poro"
+                android:textColor="#000000"
+                android:background="@drawable/edittextright"
+                android:id="@+id/uploaderText"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/uplaoderName"
+                android:layout_toEndOf="@+id/uplaoderName"
+                android:layout_marginLeft="34dp" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/descriptionText"
+                android:text="YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY"
+                android:textColor="#000000"
+                android:background="@drawable/edittexthalfright"
+                android:layout_below="@+id/uploaderText"
+                android:layout_alignLeft="@+id/uploaderText"
+                android:layout_alignStart="@+id/uploaderText" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Description: "
+                android:textColor="#000000"
+                android:background="@drawable/edittexthalfleft"
+                android:id="@+id/description"
+                android:layout_below="@+id/uplaoderName"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/descriptionText"
+                android:layout_toStartOf="@+id/descriptionText" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

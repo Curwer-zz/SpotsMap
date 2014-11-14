@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back_re"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/uplaoderText"
+            android:layout_width="190dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Reset your Password."
+            android:textColor="#50FFFFFF"
+            android:textSize="17dp"
+            android:layout_marginTop="26dp"/>
+
+        <TextView
+            android:id="@+id/alert"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:textColor="#000000" />
+
+        <net.eray.spotsmap.customView.RippleLoginForm
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailForm"
+            android:layout_below="@+id/uplaoderText"
+            android:layout_centerHorizontal="true"
+            android:background="#FFF"
+            android:padding="20dp">
+
+            <net.eray.spotsmap.customView.RippleEditText
+                android:id="@+id/forpas"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="Email"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="15dp">
+            </net.eray.spotsmap.customView.RippleEditText>
+
+        </net.eray.spotsmap.customView.RippleLoginForm>
+
+
+
+        <Button
+            android:id="@+id/respass"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/emailForm"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="34dp"
+            android:background="@drawable/loginstyle"
+            android:text="Reset"
+            android:textColor="#000000"
+            android:textSize="13dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+        <net.eray.spotsmap.floatingActionButton.FloatingActionButton
+            android:id="@+id/fabbutton_passRes"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="bottom|right"
+            app:drawable="@drawable/ic_action_done"
+            app:color="#0dbe0d"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"/>
+
+    </FrameLayout>
+
+</LinearLayout>

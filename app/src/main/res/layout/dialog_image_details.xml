@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#2d882d">
+
+    <net.eray.spotsmap.customView.RippleLoginForm
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginForm"
+        android:layout_centerHorizontal="true"
+        android:background="#FFF"
+        android:padding="20dp"
+        android:layout_marginTop="20dp">
+
+        <net.eray.spotsmap.customView.RippleEditText
+            android:id="@+id/titleDialog"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="Title"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:singleLine="true"
+            android:background="@android:color/transparent"
+            android:inputType="textCapSentences"
+            android:imeOptions="actionNext"
+            android:visibility="visible"
+            >
+            <requestFocus />
+        </net.eray.spotsmap.customView.RippleEditText>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialog_progress"
+            android:layout_alignBottom="@+id/loginForm"
+            android:layout_centerInParent="true"
+            android:layout_alignParentEnd="false"
+            android:visibility="gone"/>
+
+        <net.eray.spotsmap.customView.RippleEditText
+            android:id="@+id/discriptionDialog"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="true"
+            android:minHeight="40dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:layout_alignLeft="@+id/titleDialog"
+            android:layout_below="@+id/titleDialog"
+            android:ems="10"
+            android:hint="Description"
+            android:inputType="textMultiLine|textCapSentences"
+            android:background="@android:color/transparent"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:imeOptions="actionDone"
+            android:visibility="visible">
+        </net.eray.spotsmap.customView.RippleEditText>
+    </net.eray.spotsmap.customView.RippleLoginForm>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_below="@+id/loginForm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:weightSum="2"
+        android:background="#33b5e5">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/btnCancelDialog">
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Cancel"
+                android:id="@+id/dia_btnCancel"
+                android:background="@drawable/btn_backg_cam"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="#FFF"
+                android:gravity="center"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/btnUploadDialog">
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Upload"
+                android:id="@+id/dia_btnUpload"
+                android:background="@drawable/btn_backflash"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="#FFF"
+                android:gravity="center"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

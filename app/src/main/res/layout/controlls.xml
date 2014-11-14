@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout_hollow">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/relativeLayout_hollow">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#323232"
+            android:id="@+id/linearLayout"
+            android:weightSum="2">
+
+            <ImageButton
+                android:id="@+id/btnBackCam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_backg_cam"
+                android:src="@drawable/ic_action_cancel"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+
+
+            <ImageButton
+                android:id="@+id/btnFlash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_backflash"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/linearLayout"
+            android:background="@drawable/back_cam">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=""
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:id="@+id/txt_imageList"
+                android:layout_centerHorizontal="true"
+                android:textColor="#FFF"
+                android:visibility="invisible"/>
+
+            <Button
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:id="@+id/btnCapture"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                android:background="@drawable/ic_image_center_focus_weak"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/btnDone"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_navigation_check"
+                android:visibility="gone" />
+
+            <Button
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/ic_navigation_refresh"
+                android:id="@+id/btnRefrech"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <net.eray.spotsmap.floatingActionButton.FloatingActionButton
+                    android:id="@+id/fabbutton_camera"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_gravity="bottom|right"
+                    app:drawable="@drawable/ic_content_create"
+                    app:color="#0dbe0d"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"/>
+
+            </FrameLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

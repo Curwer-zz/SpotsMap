@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:id="@+id/selected" android:oneshot="false" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/fab_login" android:duration="250" />
+    <item android:drawable="@drawable/fab_login_1" android:duration="250" />
+    <item android:drawable="@drawable/fab_login_half" android:duration="250" />
+    <item android:drawable="@drawable/fab_login_2" android:duration="250" />
+    <item android:drawable="@drawable/fab_login_open" android:duration="250" />
+    <item android:drawable="@drawable/fab_login_2" android:duration="250" />
+    <item android:drawable="@drawable/fab_login_half" android:duration="250" />
+    <item android:drawable="@drawable/fab_login_1" android:duration="250" />
+</animation-list>
