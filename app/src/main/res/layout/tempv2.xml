@@ -2,144 +2,45 @@
 
 <RelativeLayout
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/login_back">
+    android:background="@drawable/back">
+
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/scrollRelative"
-        android:background="@drawable/back_re">
+        android:layout_width="fill_parent"
+        android:layout_height="175dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#4CAF50">
 
         <TextView
-            android:id="@+id/marker_titlev2"
-            android:layout_width="match_parent"
-            android:layout_height="?android:actionBarSize"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:gravity="center"
-            android:layout_gravity="bottom"
-            android:textColor="@android:color/holo_blue_dark"
-            android:background="#FFF"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <ScrollView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/scrollView"
-            android:layout_below="@id/marker_titlev2"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" >
-
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:id="@+id/one">
-
-
-                    <RelativeLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:background="#FFF"
-                        android:id="@+id/squareRelative">
-
-                        <android.support.v4.view.ViewPager
-                            xmlns:android="http://schemas.android.com/apk/res/android"
-                            android:id="@+id/mapPagerAlbum"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            />
-
-                    </RelativeLayout>
-
-
-
-
-
-
-                <RelativeLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:paddingRight="10dp"
-                    android:paddingLeft="10dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="#FFF"
-                    android:layout_below="@+id/squareRelative"
-                    android:id="@+id/two">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Uploader:"
-                        android:layout_marginTop="10dp"
-                        android:textColor="#50575757"
-                        android:paddingBottom="5dp"
-                        android:id="@+id/staticUplader" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="--"
-                        android:id="@+id/uploader"
-                        android:textColor="@android:color/holo_blue_dark"
-                        android:textStyle="bold"
-                        android:layout_marginBottom="10dp"
-                        android:layout_below="@+id/staticUplader" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:id="@+id/three"
-                    android:paddingRight="10dp"
-                    android:paddingLeft="10dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="#FFF"
-                    android:layout_below="@+id/two"
-                    android:layout_centerHorizontal="true">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Description"
-                        android:layout_marginTop="10dp"
-                        android:textColor="#50575757"
-                        android:paddingBottom="5dp"
-                        android:id="@+id/descr"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="--"
-                        android:textColor="@android:color/holo_blue_dark"
-                        android:textStyle="bold"
-                        android:layout_marginBottom="15dp"
-                        android:id="@+id/decsripText"
-                        android:layout_below="@+id/descr"/>
-                </RelativeLayout>
-
-
-
-            </RelativeLayout>
-        </ScrollView>
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Profile"
+            android:id="@+id/textView2"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#4CAF50"
+        android:id="@+id/logout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Logout"
+            android:id="@+id/textView4"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
 </RelativeLayout>

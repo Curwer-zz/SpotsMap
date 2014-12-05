@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="io.codetail.circularreveal-unspecified">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/SpotsMap/io.codetail.circularreveal/unspecified/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/SpotsMap/io.codetail.circularreveal/unspecified/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

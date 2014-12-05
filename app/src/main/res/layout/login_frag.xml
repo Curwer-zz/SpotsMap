@@ -5,91 +5,149 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
-    <FrameLayout
+    <io.codetail.widget.RevealFrameLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@drawable/back"
-        android:orientation="vertical" >
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/back_re"
+            android:orientation="vertical"
+            android:id="@+id/loginSlide">
 
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:paddingTop="10dp"
-            android:layout_marginBottom="15dp"
-            android:src="@drawable/login_icon" />
-
-        <net.eray.spotsmap.customView.RippleLoginForm
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/loginForm"
-            android:layout_below="@+id/imageView1"
-            android:layout_centerHorizontal="true"
-            android:background="#FFF"
-            android:padding="20dp">
-
-            <net.eray.spotsmap.customView.RippleEditText
-                android:id="@+id/username"
-                android:layout_width="250dp"
-                android:layout_height="40dp"
-                android:paddingLeft="7dp"
-                android:paddingRight="7dp"
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:ems="10"
-                android:hint="Username"
-                android:textColor="#000000"
-                android:textSize="15dp"
-                android:singleLine="true"
-                android:background="@android:color/transparent"
-                android:inputType="textPersonName">
-            </net.eray.spotsmap.customView.RippleEditText>
+                android:paddingTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/login_icon" />
 
-            <net.eray.spotsmap.customView.RippleEditText
-                android:id="@+id/pword"
-                android:layout_width="250dp"
-                android:layout_height="40dp"
-                android:paddingLeft="7dp"
-                android:paddingRight="7dp"
-                android:layout_alignLeft="@+id/username"
-                android:layout_below="@+id/username"
-                android:ems="10"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:background="@android:color/transparent"
-                android:textColor="#000000"
-                android:textSize="15dp" >
-                </net.eray.spotsmap.customView.RippleEditText>
+            <net.eray.ParkourPlayground.customView.RippleLoginForm
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/loginForm"
+                android:layout_below="@+id/imageView1"
+                android:layout_centerHorizontal="true"
+                android:background="#FFF"
+                android:padding="20dp">
 
-            </net.eray.spotsmap.customView.RippleLoginForm>
+                <net.eray.ParkourPlayground.customView.RippleEditText
+                    android:id="@+id/username"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:ems="10"
+                    android:hint="Username"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:singleLine="true"
+                    android:background="@android:color/transparent"
+                    android:inputType="textPersonName"
+                    android:imeOptions="actionNext"
+                    android:visibility="visible">
+                    <requestFocus />
+                </net.eray.ParkourPlayground.customView.RippleEditText>
 
-        <net.eray.spotsmap.customView.RippleButton
-            android:id="@+id/login"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:layout_below="@+id/loginForm"
-            android:layout_centerHorizontal="true"
-            android:visibility="gone"
-            android:layout_marginTop="15dp"></net.eray.spotsmap.customView.RippleButton>
+                <ProgressBar
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progressBar"
+                    android:layout_alignBottom="@+id/loginForm"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="false"
+                    android:visibility="gone"/>
 
-        <TextView
-            android:id="@+id/loginErrorMsg"
-            android:layout_width="fill_parent"
-            android:layout_height="20dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:textColor="#000000" />
+                <net.eray.ParkourPlayground.customView.RippleEditText
+                    android:id="@+id/pword"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:layout_alignLeft="@+id/username"
+                    android:layout_below="@+id/username"
+                    android:ems="10"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:background="@android:color/transparent"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:imeOptions="actionDone"
+                    android:visibility="visible">
+                </net.eray.ParkourPlayground.customView.RippleEditText>
+
+            </net.eray.ParkourPlayground.customView.RippleLoginForm>
+
+            <net.eray.ParkourPlayground.customView.RippleButton
+                android:id="@+id/login"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_below="@+id/loginForm"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:layout_marginTop="15dp">
+            </net.eray.ParkourPlayground.customView.RippleButton>
+
+            <TextView
+                android:id="@+id/loginErrorMsg"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Problems signing in?"
+                android:textColor="#FFFFFF"
+                android:id="@+id/txt_problem"
+                android:layout_below="@+id/loginForm"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txt_problem"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="#33b5e5"
+                android:id="@+id/signup_link">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Sign up here"
+                    android:id="@+id/textView"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#FFFFFF"/>
+            </RelativeLayout>
 
 
-    </RelativeLayout>
+        </RelativeLayout>
 
-    </FrameLayout>
+        <net.eray.ParkourPlayground.floatingActionButton.FloatingActionButton
+            android:id="@+id/fabbutton_login"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="bottom|right"
+            app:drawable="@drawable/ic_action_lock"
+            app:color="#0dbe0d"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"/>
+
+    </io.codetail.widget.RevealFrameLayout>
 
 </LinearLayout>

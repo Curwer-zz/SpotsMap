@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Ldialog/Ldialog.iml" filepath="$PROJECT_DIR$/Ldialog/Ldialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ParkourPlayground.iml" filepath="$PROJECT_DIR$/ParkourPlayground.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpotsMap.iml" filepath="$PROJECT_DIR$/SpotsMap.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/io.codetail.circularreveal/io.codetail.circularreveal.iml" filepath="$PROJECT_DIR$/io.codetail.circularreveal/io.codetail.circularreveal.iml" />
     </modules>
   </component>
 </project>

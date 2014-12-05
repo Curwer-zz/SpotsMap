@@ -29,7 +29,7 @@
             android:layout_alignParentRight="true"
             android:textColor="#000000" />
 
-        <net.eray.spotsmap.customView.RippleLoginForm
+        <net.eray.ParkourPlayground.customView.RippleLoginForm
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/emailForm"
@@ -38,7 +38,7 @@
             android:background="#FFF"
             android:padding="20dp">
 
-            <net.eray.spotsmap.customView.RippleEditText
+            <net.eray.ParkourPlayground.customView.RippleEditText
                 android:id="@+id/forpas"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
@@ -51,9 +51,9 @@
                 android:singleLine="true"
                 android:textColor="#000000"
                 android:textSize="15dp">
-                </net.eray.spotsmap.customView.RippleEditText>
+                </net.eray.ParkourPlayground.customView.RippleEditText>
 
-        </net.eray.spotsmap.customView.RippleLoginForm>
+        </net.eray.ParkourPlayground.customView.RippleLoginForm>
 
 
 

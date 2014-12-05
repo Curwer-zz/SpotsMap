@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:background="#2d882d">
 
-    <net.eray.spotsmap.customView.RippleLoginForm
+    <net.eray.ParkourPlayground.customView.RippleLoginForm
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/loginForm"
@@ -13,7 +13,7 @@
         android:padding="20dp"
         android:layout_marginTop="20dp">
 
-        <net.eray.spotsmap.customView.RippleEditText
+        <net.eray.ParkourPlayground.customView.RippleEditText
             android:id="@+id/titleDialog"
             android:layout_width="250dp"
             android:layout_height="40dp"
@@ -22,7 +22,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:ems="10"
-            android:hint="Title"
+            android:hint="@string/img_title"
             android:textColor="#000000"
             android:textSize="15dp"
             android:singleLine="true"
@@ -32,7 +32,7 @@
             android:visibility="visible"
             >
             <requestFocus />
-        </net.eray.spotsmap.customView.RippleEditText>
+        </net.eray.ParkourPlayground.customView.RippleEditText>
 
         <ProgressBar
             style="?android:attr/progressBarStyleSmall"
@@ -44,7 +44,7 @@
             android:layout_alignParentEnd="false"
             android:visibility="gone"/>
 
-        <net.eray.spotsmap.customView.RippleEditText
+        <net.eray.ParkourPlayground.customView.RippleEditText
             android:id="@+id/discriptionDialog"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
@@ -55,25 +55,24 @@
             android:layout_alignLeft="@+id/titleDialog"
             android:layout_below="@+id/titleDialog"
             android:ems="10"
-            android:hint="Description"
+            android:hint="@string/img_description"
             android:inputType="textMultiLine|textCapSentences"
             android:background="@android:color/transparent"
             android:textColor="#000000"
             android:textSize="15dp"
             android:imeOptions="actionDone"
             android:visibility="visible">
-        </net.eray.spotsmap.customView.RippleEditText>
-    </net.eray.spotsmap.customView.RippleLoginForm>
+        </net.eray.ParkourPlayground.customView.RippleEditText>
+    </net.eray.ParkourPlayground.customView.RippleLoginForm>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="?android:actionBarSize"
-        android:layout_below="@+id/loginForm"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
         android:weightSum="2"
-        android:background="#33b5e5">
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
 
         <RelativeLayout
@@ -87,7 +86,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Cancel"
+                android:text="@string/cancel"
                 android:id="@+id/dia_btnCancel"
                 android:background="@drawable/btn_backg_cam"
                 android:layout_centerVertical="true"
@@ -107,7 +106,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Upload"
+                android:text="@string/img_upload"
                 android:id="@+id/dia_btnUpload"
                 android:background="@drawable/btn_backflash"
                 android:layout_centerVertical="true"
@@ -116,4 +115,20 @@
                 android:gravity="center"/>
         </RelativeLayout>
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/loginForm"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:id="@+id/relativeLayout">
+
+        <fragment
+            android:id="@+id/mapPosition"
+            android:name="com.androidmapsextensions.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        </RelativeLayout>
 </RelativeLayout>

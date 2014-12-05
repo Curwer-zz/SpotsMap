@@ -2,4 +2,7 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="FloatingActionBarColor_4CAF50">#4CAF50</color>
+    <color name="FloatingActionBarColor_FFFFFF">#FFFFFF</color>
 </resources>

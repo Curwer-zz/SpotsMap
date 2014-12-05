@@ -11,5 +11,25 @@
     <string name="title_activity_activity_login">Login</string>
     <string name="title_activity_activity_register">Activity_register</string>
     <string name="title_activity_activity__pass_reset">Activity_PassReset</string>
+    <string name="title_activity_activity__spot_info">Details</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="toolbar_title">Spot view</string>
+    <string name="username">Username</string>
+    <string name="Password">Password</string>
+    <string name="sign_up">Sign up here</string>
+    <string name="signin_problem">Problems signing in?</string>
+    <string name="logout">Logout</string>
+    <string name="profile">Profile</string>
+    <string name="img_title">Title</string>
+    <string name="img_description">Description</string>
+    <string name="cancel">Cancel</string>
+    <string name="img_upload">Upload</string>
+    <string name="email">E-mail</string>
+    <string name="txt_registerToPlayground">Register on ParkourPlaygorund</string>
+    <string name="txt_resetPassword">Reset your password</string>
+    <string name="toast_validEmail">You must enter a valid email</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
 </resources>

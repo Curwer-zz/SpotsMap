@@ -16,14 +16,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="15dp"
-            android:text="Register to Spots map"
+            android:text="@string/txt_registerToPlayground"
             android:textColor="#50FFFFFF"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="26dp" />
 
 
-        <net.eray.spotsmap.customView.RippleLoginForm
+        <net.eray.ParkourPlayground.customView.RippleLoginForm
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/uplaoderText"
@@ -33,47 +33,47 @@
             android:layout_margin="20dp"
             android:layout_centerHorizontal="true">
 
-            <net.eray.spotsmap.customView.RippleEditText
+            <net.eray.ParkourPlayground.customView.RippleEditText
                 android:id="@+id/username"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:background="@android:color/transparent"
-                android:hint="Username"
+                android:hint="@string/username"
                 android:textColor="#000000"
                 android:textSize="15dp"
                 android:inputType="textPersonName">
-                </net.eray.spotsmap.customView.RippleEditText>
+                </net.eray.ParkourPlayground.customView.RippleEditText>
 
-            <net.eray.spotsmap.customView.RippleEditText
+            <net.eray.ParkourPlayground.customView.RippleEditText
                 android:id="@+id/email"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:layout_below="@+id/username"
                 android:background="@android:color/transparent"
                 android:ems="10"
-                android:hint="E-mail"
+                android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 android:textColor="#000000"
                 android:textSize="15dp"
                 android:singleLine="true">
-                </net.eray.spotsmap.customView.RippleEditText>
+                </net.eray.ParkourPlayground.customView.RippleEditText>
 
-            <net.eray.spotsmap.customView.RippleEditText
+            <net.eray.ParkourPlayground.customView.RippleEditText
                 android:id="@+id/pword"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:background="@android:color/transparent"
                 android:ems="10"
-                android:hint="Password"
+                android:hint="@string/Password"
                 android:inputType="textPassword"
                 android:textColor="#000000"
                 android:textSize="15dp"
                 android:layout_below="@+id/email">
-                </net.eray.spotsmap.customView.RippleEditText>
+                </net.eray.ParkourPlayground.customView.RippleEditText>
 
-            </net.eray.spotsmap.customView.RippleLoginForm>
+            </net.eray.ParkourPlayground.customView.RippleLoginForm>
 
-        <net.eray.spotsmap.customView.RippleButton
+        <net.eray.ParkourPlayground.customView.RippleButton
             android:id="@+id/register"
             android:layout_width="65dp"
             android:layout_height="65dp"
@@ -83,7 +83,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="19dp"
             android:visibility="gone">
-            </net.eray.spotsmap.customView.RippleButton>
+            </net.eray.ParkourPlayground.customView.RippleButton>
 
     </RelativeLayout>
 

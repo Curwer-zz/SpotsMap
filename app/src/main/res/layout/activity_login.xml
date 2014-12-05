@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
-    <FrameLayout
+    <io.codetail.widget.RevealFrameLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
@@ -13,8 +13,9 @@
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:background="@drawable/back_re"
-            android:orientation="vertical" >
+            android:background="@drawable/back"
+            android:orientation="vertical"
+            android:id="@+id/loginSlide">
 
             <ImageView
                 android:id="@+id/imageView1"
@@ -24,9 +25,10 @@
                 android:layout_centerHorizontal="true"
                 android:paddingTop="10dp"
                 android:layout_marginBottom="15dp"
-                android:src="@drawable/login_icon" />
+                android:src="@drawable/ic_launcher"
+                android:visibility="invisible"/>
 
-            <net.eray.spotsmap.customView.RippleLoginForm
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/loginForm"
@@ -35,7 +37,7 @@
                 android:background="#FFF"
                 android:padding="20dp">
 
-                <net.eray.spotsmap.customView.RippleEditText
+                <android.support.v7.internal.widget.TintEditText
                     android:id="@+id/username"
                     android:layout_width="250dp"
                     android:layout_height="40dp"
@@ -44,28 +46,26 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:ems="10"
-                    android:hint="Username"
-                    android:textColor="#000000"
+                    android:hint="@string/username"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/secondary_text_light"
                     android:textSize="15dp"
                     android:singleLine="true"
-                    android:background="@android:color/transparent"
                     android:inputType="textPersonName"
                     android:imeOptions="actionNext"
                     android:visibility="visible">
-                    <requestFocus />
-                </net.eray.spotsmap.customView.RippleEditText>
+                </android.support.v7.internal.widget.TintEditText>
 
                 <ProgressBar
                     style="?android:attr/progressBarStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/progressBar"
-                    android:layout_alignBottom="@+id/loginForm"
                     android:layout_centerInParent="true"
                     android:layout_alignParentEnd="false"
                     android:visibility="gone"/>
 
-                <net.eray.spotsmap.customView.RippleEditText
+                <android.support.v7.internal.widget.TintEditText
                     android:id="@+id/pword"
                     android:layout_width="250dp"
                     android:layout_height="40dp"
@@ -74,18 +74,18 @@
                     android:layout_alignLeft="@+id/username"
                     android:layout_below="@+id/username"
                     android:ems="10"
-                    android:hint="Password"
+                    android:hint="@string/Password"
                     android:inputType="textPassword"
-                    android:background="@android:color/transparent"
                     android:textColor="#000000"
+                    android:textColorHint="@android:color/secondary_text_light"
                     android:textSize="15dp"
                     android:imeOptions="actionDone"
                     android:visibility="visible">
-                </net.eray.spotsmap.customView.RippleEditText>
+                </android.support.v7.internal.widget.TintEditText>
 
-            </net.eray.spotsmap.customView.RippleLoginForm>
+            </RelativeLayout>
 
-            <net.eray.spotsmap.customView.RippleButton
+            <net.eray.ParkourPlayground.customView.RippleButton
                 android:id="@+id/login"
                 android:layout_width="65dp"
                 android:layout_height="65dp"
@@ -93,7 +93,7 @@
                 android:layout_centerHorizontal="true"
                 android:visibility="gone"
                 android:layout_marginTop="15dp">
-            </net.eray.spotsmap.customView.RippleButton>
+            </net.eray.ParkourPlayground.customView.RippleButton>
 
             <TextView
                 android:id="@+id/loginErrorMsg"
@@ -107,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Problems signing in?"
+                android:text="@string/signin_problem"
                 android:textColor="#FFFFFF"
                 android:id="@+id/txt_problem"
                 android:layout_below="@+id/loginForm"
@@ -120,14 +120,14 @@
                 android:layout_below="@+id/txt_problem"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="25dp"
-                android:background="#33b5e5"
+                android:background="#4CAF50"
                 android:id="@+id/signup_link">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Sign up here"
+                    android:text="@string/sign_up"
                     android:id="@+id/textView"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true"
@@ -137,7 +137,7 @@
 
         </RelativeLayout>
 
-        <net.eray.spotsmap.floatingActionButton.FloatingActionButton
+        <net.eray.ParkourPlayground.floatingActionButton.FloatingActionButton
             android:id="@+id/fabbutton_login"
             android:layout_width="72dp"
             android:layout_height="72dp"
@@ -147,6 +147,6 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"/>
 
-    </FrameLayout>
+    </io.codetail.widget.RevealFrameLayout>
 
 </LinearLayout>

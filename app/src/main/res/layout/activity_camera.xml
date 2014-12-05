@@ -5,13 +5,21 @@
     android:orientation="vertical"
     tools:context=".MyActivity">
 
-    <FrameLayout
-        android:id="@+id/camera_preview"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-        <include
-            android:id="@+id/controls_layout"
-            layout="@layout/controlls" />
+    <RelativeLayout
+        android:id="@+id/cameraSlide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/camera_preview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <include
+                android:id="@+id/controls_layout"
+                layout="@layout/controlls" />
+
+        </FrameLayout>
+    </RelativeLayout>
 </RelativeLayout>

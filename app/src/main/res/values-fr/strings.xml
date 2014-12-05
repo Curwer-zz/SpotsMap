@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Parkour Playground</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_pager_">Pager_Activity</string>
+    <string name="title_activity_test_slide">testSlide</string>
+    <string name="title_activity_my">Map</string>
+    <string name="banner_ad_unit_id">ca-app-pub-4533601820925807/2114309576</string>
+    <string name="title_activity_activity_login">Login</string>
+    <string name="title_activity_activity_register">Activity_register</string>
+    <string name="title_activity_activity__pass_reset">Activity_PassReset</string>
+    <string name="title_activity_activity__spot_info">Details</string>
+    <string name="drawer_open">Ouvert</string>
+    <string name="drawer_close">fermé</string>
+    <string name="toolbar_title">Voir spot</string>
+    <string name="username">Nom d\'utilisateur</string>
+    <string name="Password">Mot de passe</string>
+    <string name="sign_up">Inscrivez-vous ici</string>
+    <string name="signin_problem">Problèmes de connexion?</string>
+    <string name="logout">Déconnexion</string>
+    <string name="profile">Profil</string>
+    <string name="img_title">Titre</string>
+    <string name="img_description">Description</string>
+    <string name="cancel">résilier</string>
+    <string name="img_upload">télécharger</string>
+    <string name="email">email</string>
+    <string name="txt_registerToPlayground">Inscrivez-vous sur ParkourPlayground</string>
+    <string name="txt_resetPassword">réinitialiser votre mot de passe</string>
+    <string name="toast_validEmail">Geben Sie eine gültige E-Mail eingeben</string>
+    <string name="yes">Oui</string>
+    <string name="no">Aucun</string>
+
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Parkour Playground</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_pager_">Pager_Activity</string>
+    <string name="title_activity_test_slide">testSlide</string>
+    <string name="title_activity_my">Map</string>
+    <string name="banner_ad_unit_id">ca-app-pub-4533601820925807/2114309576</string>
+    <string name="title_activity_activity_login">Login</string>
+    <string name="title_activity_activity_register">Activity_register</string>
+    <string name="title_activity_activity__pass_reset">Activity_PassReset</string>
+    <string name="title_activity_activity__spot_info">Details</string>
+    <string name="drawer_open">открыто</string>
+    <string name="drawer_close">закрыто</string>
+    <string name="toolbar_title">пятно вид</string>
+    <string name="username">Имя пользователя</string>
+    <string name="Password">пароль</string>
+    <string name="sign_up">Подпишитесь здесь</string>
+    <string name="signin_problem">Проблемы при входе в?</string>
+    <string name="logout">Выход</string>
+    <string name="profile">профиль</string>
+    <string name="img_title">название</string>
+    <string name="img_description">описание</string>
+    <string name="cancel">отменить</string>
+    <string name="img_upload">загружать</string>
+    <string name="email">email</string>
+    <string name="txt_registerToPlayground">Регистрация на ParkourPlayground</string>
+    <string name="txt_resetPassword">сбросить пароль</string>
+    <string name="toast_validEmail">Вы должны ввести действительный адрес электронной почты</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+
+</resources>

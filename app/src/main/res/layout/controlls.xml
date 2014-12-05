@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <RelativeLayout
-        android:orientation="horizontal"
+        android:id="@+id/relativeLayout_hollow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/relativeLayout_hollow">
-    </RelativeLayout>
+        android:orientation="horizontal"></RelativeLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -20,24 +19,24 @@
         android:layout_below="@+id/relativeLayout_hollow">
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="?android:actionBarSize"
-            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:background="#323232"
-            android:id="@+id/linearLayout"
+            android:orientation="horizontal"
             android:weightSum="2">
 
             <ImageButton
                 android:id="@+id/btnBackCam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn_backg_cam"
-                android:src="@drawable/ic_action_cancel"
                 android:layout_gravity="center"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:background="@drawable/btn_backg_cam"
+                android:src="@drawable/ic_action_cancel" />
 
 
             <ImageButton
@@ -45,8 +44,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/btn_backflash"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:background="@drawable/btn_backflash" />
 
 
         </LinearLayout>
@@ -59,60 +58,57 @@
             android:background="@drawable/back_cam">
 
             <TextView
+                android:id="@+id/txt_imageList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text=""
-                android:paddingRight="15dp"
-                android:paddingLeft="15dp"
-                android:id="@+id/txt_imageList"
                 android:layout_centerHorizontal="true"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#FFF"
-                android:visibility="invisible"/>
+                android:visibility="invisible" />
 
             <Button
+                android:id="@+id/btnCapture"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                android:id="@+id/btnCapture"
+                android:layout_centerHorizontal="true"
                 android:layout_centerInParent="true"
-                android:visibility="visible"
                 android:background="@drawable/ic_image_center_focus_weak"
-                android:layout_centerHorizontal="true"/>
+                android:visibility="visible" />
 
             <Button
+                android:id="@+id/btnDone"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:id="@+id/btnDone"
                 android:layout_centerInParent="true"
                 android:background="@drawable/ic_navigation_check"
                 android:visibility="gone" />
 
             <Button
+                android:id="@+id/btnRefrech"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:background="@drawable/ic_navigation_refresh"
-                android:id="@+id/btnRefrech"
                 android:layout_centerInParent="true"
-                android:visibility="gone"/>
+                android:background="@drawable/ic_navigation_refresh"
+                android:visibility="gone" />
 
             <FrameLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
 
-                <net.eray.spotsmap.floatingActionButton.FloatingActionButton
+                <net.eray.ParkourPlayground.floatingActionButton.FloatingActionButton
                     android:id="@+id/fabbutton_camera"
                     android:layout_width="72dp"
                     android:layout_height="72dp"
                     android:layout_gravity="bottom|right"
-                    app:drawable="@drawable/ic_content_create"
-                    app:color="#0dbe0d"
+                    android:layout_marginBottom="20dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="20dp"/>
+                    app:color="#0dbe0d"
+                    app:drawable="@drawable/ic_content_create" />
 
             </FrameLayout>
         </RelativeLayout>
     </RelativeLayout>
-
-
-
 </RelativeLayout>

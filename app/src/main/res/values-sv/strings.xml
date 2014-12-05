@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Parkour Playground</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_pager_">Pager_Activity</string>
+    <string name="title_activity_test_slide">testSlide</string>
+    <string name="title_activity_my">Map</string>
+    <string name="banner_ad_unit_id">ca-app-pub-4533601820925807/2114309576</string>
+    <string name="title_activity_activity_login">Login</string>
+    <string name="title_activity_activity_register">Activity_register</string>
+    <string name="title_activity_activity__pass_reset">Activity_PassReset</string>
+    <string name="title_activity_activity__spot_info">Details</string>
+    <string name="drawer_open">Öpen</string>
+    <string name="drawer_close">Stängd</string>
+    <string name="toolbar_title">Spot vy</string>
+    <string name="username">Användarnamn</string>
+    <string name="Password">Lösenord</string>
+    <string name="sign_up">Regestrera dig här</string>
+    <string name="signin_problem">Problem med inloggning?</string>
+    <string name="logout">Logga ut</string>
+    <string name="profile">Profil</string>
+    <string name="img_title">Rubrik</string>
+    <string name="img_description">Beskrivning</string>
+    <string name="cancel">Avbryt</string>
+    <string name="img_upload">Ladda upp</string>
+    <string name="email">e-post</string>
+    <string name="txt_registerToPlayground">Regestrera dig på ParkourPlaygorund</string>
+    <string name="txt_resetPassword">Återställ ditt lösenord</string>
+    <string name="toast_validEmail">Du måste ange en giltig e-postadress</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nej</string>
+
+</resources>

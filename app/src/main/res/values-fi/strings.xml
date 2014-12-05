@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Parkour Playground</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_pager_">Pager_Activity</string>
+    <string name="title_activity_test_slide">testSlide</string>
+    <string name="title_activity_my">Map</string>
+    <string name="banner_ad_unit_id">ca-app-pub-4533601820925807/2114309576</string>
+    <string name="title_activity_activity_login">Login</string>
+    <string name="title_activity_activity_register">Activity_register</string>
+    <string name="title_activity_activity__pass_reset">Activity_PassReset</string>
+    <string name="title_activity_activity__spot_info">Details</string>
+    <string name="drawer_open">Avoinna</string>
+    <string name="drawer_close">Sulkea</string>
+    <string name="toolbar_title">Kohdekartalle</string>
+    <string name="username">Käyttäjätunnus</string>
+    <string name="Password">Salasana</string>
+    <string name="sign_up">Rekisteröidy täällä</string>
+    <string name="signin_problem">Onko sulla kirjaudu ongelmia?</string>
+    <string name="logout">Kirjaudu ulos</string>
+    <string name="profile">Profiili</string>
+    <string name="img_title">Otsikko</string>
+    <string name="img_description">Kuvaus</string>
+    <string name="cancel">Peruuttaa</string>
+    <string name="img_upload">Tallennettu</string>
+    <string name="email">sähköposti</string>
+    <string name="txt_registerToPlayground">Rekisteröityä ParkourPlayground</string>
+    <string name="txt_resetPassword">Nollaa salasana</string>
+    <string name="toast_validEmail">Sinun tulee voimassa oleva sähköpostiosoite</string>
+    <string name="yes">Kyllä</string>
+    <string name="no">Ei</string>
+
+</resources>

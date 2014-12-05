@@ -8,7 +8,7 @@
         android:layout_height="match_parent"
         >
 
-        <net.eray.spotsmap.FitImageView
+        <net.eray.ParkourPlayground.FitImageView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/albumPager"/>
@@ -19,6 +19,7 @@
             android:id="@+id/progressBar2"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
+
 
     </RelativeLayout>
 

@@ -1,53 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<pre-dex-items>
+<items version="2" >
 
     <item
-        dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\release\classes-c9cc1c5bb0b881b7c649b04899f1405380224778.jar"
-        jar="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\classes.jar"
+        jar="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\exploded-aar\me.drakeet.materialdialog\library\1.1.0\classes.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="686344a780033e4ba22b926cd225f8d4941247e6"/>
+        sha1="804d685215bbede2e7767dc73b6e87ae39af4818">
+        <dex dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\debug\classes-a92900bfdd808f71f08113d1dfbb89e8910e201e.jar" />
+    </item>
     <item
-        dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\release\classes-2f77dbd3314b0861b730b856acc9701e23824d71.jar"
-        jar="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\exploded-aar\com.sothree.slidinguppanel\library\2.0.2\classes.jar"
+        jar="C:\Program Files (x86)\Android\android-studio\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.2\support-annotations-21.0.2.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="579a13f257d393fa870a50809656089cdbeb7506"/>
+        sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
+        <dex dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.2-5736825a60a2e4c748018356f8c114540084338b.jar" />
+    </item>
     <item
-        dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\release\classes-52428a0492365fd7dad4a3ab50cc7d67971256a7.jar"
         jar="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.1.71\classes.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="0f6d5c1ef2e982c3b7858408e3df389cf5d202da"/>
+        sha1="0f6d5c1ef2e982c3b7858408e3df389cf5d202da">
+        <dex dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\debug\classes-52428a0492365fd7dad4a3ab50cc7d67971256a7.jar" />
+    </item>
     <item
-        dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\release\Parse-1.5.1-9961395025f2d991ece788a2de974b119b4f5d64.jar"
         jar="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\libs\Parse-1.5.1.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="3d645417e7780d44f32e29a3ec6b729b75aef26c"/>
+        sha1="3d645417e7780d44f32e29a3ec6b729b75aef26c">
+        <dex dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\debug\Parse-1.5.1-9961395025f2d991ece788a2de974b119b4f5d64.jar" />
+    </item>
     <item
-        dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\release\library-2.4.0-5b4d74f4c40859d6128de682eb30fc0ea492026a.jar"
+        jar="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\exploded-aar\SpotsMap\io.codetail.circularreveal\unspecified\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="30b6aa6feab4fbb36f46665af832c39d4d5d2bb6">
+        <dex dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\debug\classes-189280c11e7570bda46e17375d9de464e36c5e13.jar" />
+    </item>
+    <item
+        jar="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="7ae2d38807a43b2f2185ff4089a92c790b579e54">
+        <dex dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\debug\classes-8a36c3bf6209647bc26f00ddde2cf4fff68d0233.jar" />
+    </item>
+    <item
         jar="C:\Users\Niclas\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb"/>
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\debug\library-2.4.0-5b4d74f4c40859d6128de682eb30fc0ea492026a.jar" />
+    </item>
     <item
-        dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\release\support-annotations-21.0.0-12c1a64ad23e0be888f0dfa6119e65a210bf4620.jar"
-        jar="C:\Program Files (x86)\Android\android-studio\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.0\support-annotations-21.0.0.jar"
+        jar="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\exploded-aar\com.rengwuxian.materialedittext\library\1.4.3\classes.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e"/>
+        sha1="c18c98500a96e0e40cd2e4eadbfac4b7436696ea">
+        <dex dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\debug\classes-ea3fe04f5c530edd80b3a22bd839d8f3b9076c1f.jar" />
+    </item>
     <item
-        dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\release\internal_impl-21.0.0-ec7a9817a5a79e52ec634f5cf903b62c7a1959ac.jar"
-        jar="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\libs\internal_impl-21.0.0.jar"
+        jar="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\exploded-aar\com.sothree.slidinguppanel\library\2.0.3\classes.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0"/>
+        sha1="e6d9885cb1cd7aae6823c5d9d301737eb0863481">
+        <dex dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\release\classes-93e1faab0307fd947e8572749f31e5bac163daec.jar" />
+    </item>
     <item
-        dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\release\classes-62a9e06568e2757d811cffe99b733e565015fd1b.jar"
         jar="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\exploded-aar\com.androidmapsextensions\android-maps-extensions\2.1.0\classes.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="4549981f1345f5487932e046cb3d96fce4352881"/>
+        sha1="4549981f1345f5487932e046cb3d96fce4352881">
+        <dex dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\debug\classes-62a9e06568e2757d811cffe99b733e565015fd1b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
+        <dex dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\debug\classes-29074023c15052c8ddd73fcf1007149a076fb099.jar" />
+    </item>
+    <item
+        jar="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\libs\internal_impl-21.0.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
+        <dex dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.2-2361b30c1a8b3fa60845adf7ecd175070512cd18.jar" />
+    </item>
 
-</pre-dex-items>
+</items>
