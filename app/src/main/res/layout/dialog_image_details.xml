@@ -13,7 +13,7 @@
         android:padding="20dp"
         android:layout_marginTop="20dp">
 
-        <net.eray.ParkourPlayground.customView.RippleEditText
+        <android.support.v7.internal.widget.TintEditText
             android:id="@+id/titleDialog"
             android:layout_width="250dp"
             android:layout_height="40dp"
@@ -32,7 +32,7 @@
             android:visibility="visible"
             >
             <requestFocus />
-        </net.eray.ParkourPlayground.customView.RippleEditText>
+        </android.support.v7.internal.widget.TintEditText>
 
         <ProgressBar
             style="?android:attr/progressBarStyleSmall"
@@ -44,7 +44,7 @@
             android:layout_alignParentEnd="false"
             android:visibility="gone"/>
 
-        <net.eray.ParkourPlayground.customView.RippleEditText
+        <android.support.v7.internal.widget.TintEditText
             android:id="@+id/discriptionDialog"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
             android:textSize="15dp"
             android:imeOptions="actionDone"
             android:visibility="visible">
-        </net.eray.ParkourPlayground.customView.RippleEditText>
+        </android.support.v7.internal.widget.TintEditText>
     </net.eray.ParkourPlayground.customView.RippleLoginForm>
 
     <LinearLayout

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardBackgroundColor="#FFF"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <TextView
+            android:id="@+id/card_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp" />
+
+        <com.parse.ParseImageView
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:id="@+id/card_image"
+            android:layout_below="@+id/card_title"
+            android:layout_alignLeft="@+id/card_title"
+            android:layout_alignStart="@+id/card_title"
+            android:layout_marginLeft="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:id="@+id/card_location"
+            android:layout_alignBottom="@+id/card_image"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="#50000000"
+            android:textSize="18sp"
+            android:layout_marginRight="54dp"
+            android:layout_marginEnd="54dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:id="@+id/card_date"
+            android:textColor="#50000000"
+            android:textSize="18sp"
+            android:layout_alignTop="@+id/card_image"
+            android:layout_alignLeft="@+id/card_location"
+            android:layout_alignStart="@+id/card_location" />
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

@@ -5,7 +5,6 @@
     android:background="@drawable/back"
     tools:context="net.eray.ParkourPlayground.Activity_SpotInfo">
 
-
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -13,6 +12,7 @@
         android:background="@color/FloatingActionBarColor_4CAF50" />
 
     <ScrollView
+        android:id="@+id/infoScroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/toolbar">
@@ -38,16 +38,16 @@
                     android:layout_centerHorizontal="true"
                     android:background="#80000000"
                     android:textAlignment="center"
-                    android:textAppearance="?android:attr/textAppearanceMedium" >
+                    android:textAppearance="?android:attr/textAppearanceMedium">
 
                     <TextView
                         android:id="@+id/uploaderID"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Error"
+                        android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:layout_centerHorizontal="true" />
+                        android:text="Error"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
                 </RelativeLayout>
 
                 <android.support.v4.view.ViewPager
@@ -83,22 +83,44 @@
                 android:layout_below="@+id/relativeLayout2"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="10dp"
-                android:background="#FFF"
-                android:minHeight="125dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp">
+                android:layout_marginRight="10dp"
+                android:background="#FFF"
+                android:minHeight="125dp">
 
                 <TextView
                     android:id="@+id/descriptionDetail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:text="Description"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_margin="10dp" />
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
             </RelativeLayout>
 
         </RelativeLayout>
 
     </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <fragment
+            android:name="net.eray.ParkourPlayground.Activity_SpotInfo$PlaceholderFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/adFragment" />
+
+        <fragment
+            android:id="@+id/adFragment"
+            android:name="net.eray.ParkourPlayground.Activity_SpotInfo$AdFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
 
 </RelativeLayout>

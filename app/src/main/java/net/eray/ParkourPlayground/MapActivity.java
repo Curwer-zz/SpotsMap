@@ -9,6 +9,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -17,13 +18,16 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.Display;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import io.codetail.animation.Animator;
 import io.codetail.animation.ViewAnimationUtils;
+import me.drakeet.materialdialog.MaterialDialog;
 
+import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -34,6 +38,8 @@ import com.androidmapsextensions.GoogleMap;
 import com.androidmapsextensions.Marker;
 import com.androidmapsextensions.MarkerOptions;
 import com.androidmapsextensions.SupportMapFragment;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
@@ -70,10 +76,11 @@ public class MapActivity extends ActionBarActivity {
     //private CustomPagerAdapter mPagerAdapter;
     private ParseImageView ImageView;
     private ProgressBar ImageViewProgress;
-    private RelativeLayout logoutRel, refrechRel;
+    private RelativeLayout logoutRel, profileRel;
     private View view;
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerLayout drawerLayout;
+    private MaterialDialog mDialog;
 
     ParseUser currentUser = ParseUser.getCurrentUser();
 
@@ -82,6 +89,13 @@ public class MapActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
+
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.sliding_layout, new PlaceholderFragment())
+                    .commit();
+        }
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         drawerLayout = (DrawerLayout) findViewById(R.id.my_drawer_layout);
         toolbar.bringToFront();
@@ -118,15 +132,11 @@ public class MapActivity extends ActionBarActivity {
 
         getSpotsQuery();
 
-        //map.setClustering(new ClusteringSettings().enabled(true).addMarkersDynamically(true).clusterSize(2));
         map.setClustering(new ClusteringSettings().clusterSize(10).enabled(true));
 
         map.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
             public void onInfoWindowClick(final Marker marker) {
-                markerTitle.setText(infoIndex.get(marker).getString("title"));
-                uploaderText.setText(infoIndex.get(marker).getString("uploader"));
-                descText.setText(infoIndex.get(marker).getString("description"));
 
                 Intent mIntent = new Intent(MapActivity.this, Activity_SpotInfo.class);
                 mIntent.putExtra("title", infoIndex.get(marker).getString("title"));
@@ -168,37 +178,37 @@ public class MapActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
 
-                AlertDialog.Builder builder1 = new AlertDialog.Builder(MapActivity.this);
-                builder1.setMessage(R.string.logout+"?");
-                builder1.setCancelable(true);
-                builder1.setPositiveButton(R.string.yes,
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
+                 mDialog = new MaterialDialog(MapActivity.this)
+                        .setTitle(getString(R.string.logout))
+                        .setMessage(getString(R.string.sure))
+                        .setPositiveButton(getString(R.string.yes), new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
                                 currentUser = null;
                                 ParseUser.logOut();
-                                dialog.cancel();
+                                mDialog.dismiss();
                                 MapActivity.this.finish();
                                 Intent mIntent = new Intent(getApplicationContext(), Activity_login.class);
                                 startActivity(mIntent);
                             }
-                        });
-                builder1.setNegativeButton(R.string.no,
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-
-                                dialog.cancel();
+                        })
+                        .setNegativeButton(getString(R.string.no), new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                mDialog.dismiss();
                             }
                         });
 
-                AlertDialog skip = builder1.create();
-                skip.show();
+                mDialog.show();
+
             }
         });
 
-        refrechRel.setOnClickListener(new View.OnClickListener() {
+        profileRel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSpotsQuery();
+                Intent mIntent = new Intent(getApplicationContext(), Activity_UserProfile.class);
+                startActivity(mIntent);
             }
         });
 
@@ -263,14 +273,10 @@ public class MapActivity extends ActionBarActivity {
 
     public void findViewsById() {
         view = (View) findViewById(R.id.sliding_layout);
-        mPager = (ViewPager) findViewById(R.id.mapPagerAlbum);
         mFab_location = (FloatingActionButton) findViewById(R.id.fabbutton_location);
         mFab_cam = (FloatingActionButton) findViewById(R.id.fabbutton_cam);
-        logoutRel = (RelativeLayout) findViewById(R.id.logoutRel);
-        refrechRel = (RelativeLayout) findViewById(R.id.refrechRel);
-        descText = (TextView) findViewById(R.id.decsripText);
-        uploaderText = (TextView) findViewById(R.id.uploader);
-        markerTitle = (TextView )findViewById(R.id.marker_titlev2);
+        logoutRel = (RelativeLayout) findViewById(R.id.logout);
+        profileRel = (RelativeLayout) findViewById(R.id.profil);
         startAnimation();
     }
 
@@ -370,6 +376,77 @@ public class MapActivity extends ActionBarActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * A placeholder fragment containing a simple view. This fragment
+     * would include your content.
+     */
+    public static class PlaceholderFragment extends Fragment {
+
+        public PlaceholderFragment() {
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_ad, container, false);
+            return rootView;
+        }
+    }
+
+    /**
+     * This class makes the ad request and loads the ad.
+     */
+    public static class AdFragment extends Fragment {
+
+        private AdView mAdView;
+
+        public AdFragment() {
+        }
+
+        @Override
+        public void onActivityCreated(Bundle bundle) {
+            super.onActivityCreated(bundle);
+
+            // Gets the ad view defined in layout/ad_fragment.xml with ad unit ID set in
+            // values/strings.xml.
+            mAdView = (AdView) getView().findViewById(R.id.adView);
+
+            AdRequest adRequest = new AdRequest.Builder()
+                    .build();
+
+            // Start loading the ad in the background.
+            mAdView.loadAd(adRequest);
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            return inflater.inflate(R.layout.fragment_ad_map, container, false);
+        }
+
+        /** Called when leaving the activity */
+        @Override
+        public void onPause() {
+            super.onPause();
+            mAdView.pause();
+        }
+
+        /** Called when returning to the activity */
+        @Override
+        public void onResume() {
+            super.onResume();
+            mAdView.resume();
+        }
+
+        /** Called before the activity is destroyed */
+        @Override
+        public void onDestroy() {
+            super.onDestroy();
+            mAdView.destroy();
+        }
+
     }
 
 }

@@ -7,7 +7,8 @@
     <string name="title_activity_pager_">Pager_Activity</string>
     <string name="title_activity_test_slide">testSlide</string>
     <string name="title_activity_my">Map</string>
-    <string name="banner_ad_unit_id">ca-app-pub-4533601820925807/2114309576</string>
+    <string name="banner_ad_unit_id">ca-app-pub-4533601820925807/8950867975</string>
+    <string name="banner_ad_unit_id_map">ca-app-pub-4533601820925807/3962265173</string>
     <string name="title_activity_activity_login">Login</string>
     <string name="title_activity_activity_register">Activity_register</string>
     <string name="title_activity_activity__pass_reset">Activity_PassReset</string>
@@ -31,5 +32,10 @@
     <string name="toast_validEmail">You must enter a valid email</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="sure">Are you sure?</string>
+    <string name="title_activity_activity__user_profile">Activity_UserProfile</string>
+    <string name="title_activity_activity__profile">Activity_Profile</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="done">Done</string>
 
 </resources>

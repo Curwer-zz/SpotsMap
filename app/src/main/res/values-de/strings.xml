@@ -31,5 +31,8 @@
     <string name="toast_validEmail">Geben Sie eine gültige E-Mail eingeben</string>
     <string name="yes">Ja</string>
     <string name="no">Nein</string>
+    <string name="sure">Sind Sie sicher?</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="done">Erledigt</string>
 
 </resources>

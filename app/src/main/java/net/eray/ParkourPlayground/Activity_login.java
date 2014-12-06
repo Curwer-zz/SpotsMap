@@ -41,7 +41,6 @@ public class Activity_login extends Activity {
     ProgressDialog progress;
     View view;
 
-
     ParseUser currentUser = ParseUser.getCurrentUser();
 
     @Override
@@ -51,10 +50,7 @@ public class Activity_login extends Activity {
 
         findViewsById();
 
-
-
         isLoggedIn();
-
 
         txt_problem.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,14 +84,10 @@ public class Activity_login extends Activity {
                         @Override
                         public void done(ParseUser user, ParseException e) {
                             if (user != null){
-
-                                //startAnimation();
                                 Intent mIntent = new Intent(getApplicationContext(), MapActivity.class);
-                                mIntent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                                 startActivity(mIntent);
+                                overridePendingTransition(0,0);
                                 Activity_login.this.finish();
-
-                                //OverridePendingTransition(R.anim.scale_from_corner, R.anim.zoom_out);
                             } else {
                                 pg.setVisibility(View.GONE);
                                 inputUsername.setVisibility(View.VISIBLE);
@@ -170,8 +162,8 @@ public class Activity_login extends Activity {
                         if (i == 1) {
                             progressDismiss();
                             Intent mIntent = new Intent(getApplicationContext(), MapActivity.class);
-                            mIntent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                             startActivity(mIntent);
+                            overridePendingTransition(0,0);
                             Activity_login.this.finish();
                         } else if (i == 0) {
                             progressDismiss();

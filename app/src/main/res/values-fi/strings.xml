@@ -31,5 +31,7 @@
     <string name="toast_validEmail">Sinun tulee voimassa oleva sähköpostiosoite</string>
     <string name="yes">Kyllä</string>
     <string name="no">Ei</string>
+    <string name="sure">Oletko varma?</string>
+    <string name="done">Tehty</string>
 
 </resources>

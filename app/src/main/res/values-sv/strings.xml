@@ -31,5 +31,7 @@
     <string name="toast_validEmail">Du måste ange en giltig e-postadress</string>
     <string name="yes">Ja</string>
     <string name="no">Nej</string>
+    <string name="sure">Är du säker?</string>
+    <string name="done">Klar</string>
 
 </resources>

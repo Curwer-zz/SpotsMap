@@ -34,6 +34,7 @@ public class Activity_register extends Activity {
 
         findViewsById();
 
+        mFab.setColor(getResources().getColor(R.color.FloatingActionBarColor_4CAF50));
         mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

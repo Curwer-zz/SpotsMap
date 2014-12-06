@@ -31,5 +31,7 @@
     <string name="toast_validEmail">Вы должны ввести действительный адрес электронной почты</string>
     <string name="yes">Да</string>
     <string name="no">Нет</string>
+    <string name="sure">Ты уверен?</string>
+    <string name="done">сделанный</string>
 
 </resources>

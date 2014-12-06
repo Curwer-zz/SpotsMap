@@ -13,7 +13,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/back_re"
+        android:background="@drawable/back"
         android:orientation="vertical" >
 
         <TextView
@@ -36,7 +36,7 @@
             android:background="#FFF"
             android:padding="20dp">
 
-            <net.eray.ParkourPlayground.customView.RippleEditText
+            <android.support.v7.internal.widget.TintEditText
                 android:id="@+id/forpas"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
@@ -44,12 +44,13 @@
                 android:paddingRight="7dp"
                 android:layout_centerHorizontal="true"
                 android:background="@android:color/transparent"
+                android:textColorHint="@android:color/secondary_text_light"
                 android:ems="10"
                 android:hint="@string/email"
                 android:singleLine="true"
                 android:textColor="#000000"
                 android:textSize="15dp">
-            </net.eray.ParkourPlayground.customView.RippleEditText>
+            </android.support.v7.internal.widget.TintEditText>
 
         </net.eray.ParkourPlayground.customView.RippleLoginForm>
 

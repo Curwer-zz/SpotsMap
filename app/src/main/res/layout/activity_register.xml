@@ -12,7 +12,7 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/back_re"
+        android:background="@drawable/back"
         android:orientation="vertical" >
 
         <TextView
@@ -38,18 +38,19 @@
             android:layout_margin="20dp"
             android:layout_centerHorizontal="true">
 
-            <net.eray.ParkourPlayground.customView.RippleEditText
+            <android.support.v7.internal.widget.TintEditText
                 android:id="@+id/username"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:background="@android:color/transparent"
                 android:hint="@string/username"
+                android:textColorHint="@android:color/secondary_text_light"
                 android:textColor="#000000"
                 android:textSize="15dp"
                 android:inputType="textPersonName">
-            </net.eray.ParkourPlayground.customView.RippleEditText>
+            </android.support.v7.internal.widget.TintEditText>
 
-            <net.eray.ParkourPlayground.customView.RippleEditText
+            <android.support.v7.internal.widget.TintEditText
                 android:id="@+id/email"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
@@ -57,13 +58,14 @@
                 android:background="@android:color/transparent"
                 android:ems="10"
                 android:hint="@string/email"
+                android:textColorHint="@android:color/secondary_text_light"
                 android:inputType="textEmailAddress"
                 android:textColor="#000000"
                 android:textSize="15dp"
                 android:singleLine="true">
-            </net.eray.ParkourPlayground.customView.RippleEditText>
+            </android.support.v7.internal.widget.TintEditText>
 
-            <net.eray.ParkourPlayground.customView.RippleEditText
+            <android.support.v7.internal.widget.TintEditText
                 android:id="@+id/pword"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
@@ -72,9 +74,10 @@
                 android:hint="@string/Password"
                 android:inputType="textPassword"
                 android:textColor="#000000"
+                android:textColorHint="@android:color/secondary_text_light"
                 android:textSize="15dp"
                 android:layout_below="@+id/email">
-            </net.eray.ParkourPlayground.customView.RippleEditText>
+            </android.support.v7.internal.widget.TintEditText>
 
         </net.eray.ParkourPlayground.customView.RippleLoginForm>
 

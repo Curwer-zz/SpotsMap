@@ -9,6 +9,13 @@
         <dex dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\debug\classes-a92900bfdd808f71f08113d1dfbb89e8910e201e.jar" />
     </item>
     <item
+        jar="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.2\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="4796f18d3750bf2bfa078407a94a7f9db35b440d">
+        <dex dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\debug\classes-5f58dd5e1b856755ea1faaa5daee684375000f0a.jar" />
+    </item>
+    <item
         jar="C:\Program Files (x86)\Android\android-studio\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.2\support-annotations-21.0.2.jar"
         jumboMode="false"
         revision="20.0.0"
@@ -51,18 +58,18 @@
         <dex dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\debug\library-2.4.0-5b4d74f4c40859d6128de682eb30fc0ea492026a.jar" />
     </item>
     <item
+        jar="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.2\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="b017100da14f9c158c9f5f2f508333c224b24a7c">
+        <dex dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\debug\classes-bdae1f835e93654a4d61108ea8755ed3a0bd7a77.jar" />
+    </item>
+    <item
         jar="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\exploded-aar\com.rengwuxian.materialedittext\library\1.4.3\classes.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="c18c98500a96e0e40cd2e4eadbfac4b7436696ea">
         <dex dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\debug\classes-ea3fe04f5c530edd80b3a22bd839d8f3b9076c1f.jar" />
-    </item>
-    <item
-        jar="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\exploded-aar\com.sothree.slidinguppanel\library\2.0.3\classes.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="e6d9885cb1cd7aae6823c5d9d301737eb0863481">
-        <dex dex="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\pre-dexed\release\classes-93e1faab0307fd947e8572749f31e5bac163daec.jar" />
     </item>
     <item
         jar="C:\Users\Niclas\AndroidStudioProjects\SpotsMap\app\build\intermediates\exploded-aar\com.androidmapsextensions\android-maps-extensions\2.1.0\classes.jar"

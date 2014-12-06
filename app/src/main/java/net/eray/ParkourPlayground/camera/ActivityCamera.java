@@ -213,82 +213,77 @@ public class ActivityCamera extends FragmentActivity {
                             dialog_progress.setVisibility(View.VISIBLE);
                             titleDialog.setVisibility(View.INVISIBLE);
                             discriptionDialog.setVisibility(View.INVISIBLE);
-                            if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-                                //secondly checks if longitude and latitude has received values from the GPS
-                                if (marker.getPosition() != null) {
-                                    if (!titleDialog.getText().toString().equals("")) {
-                                        if (!discriptionDialog.getText().toString().equals("")) {
-                                            //Set the name for the image to the date
-                                            Calendar c = Calendar.getInstance();
-                                            SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
-                                            final String imagename = df.format(c.getTime());
-                                            //random picture from the res catalogue
-                                            ParseGeoPoint userPoint = new ParseGeoPoint(marker.getPosition().latitude, marker.getPosition().longitude);
-                                            ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                                            // Compress image to lower quality scale 1 - 100
-                                            rotatedCropped.compress(Bitmap.CompressFormat.PNG, 100, stream);
-                                            byte[] image = stream.toByteArray();
-                                            //insert image to a ParseFile
-                                            file = new ParseFile(imagename + ".jpeg", image);
-                                            ParseObject upload = new ParseObject("Map");
-                                            upload.put("uploader", currentUser.getUsername());
-                                            upload.put("pointUploader", ParseObject.createWithoutData("_User", currentUser.getObjectId()));
-                                            upload.put("description", discriptionDialog.getText().toString());
-                                            upload.put("title", titleDialog.getText().toString());
-                                            upload.put("validate", true);
-                                            upload.put("geopoint", userPoint);
-                                            upload.put("size", imageList.size());
-                                            upload.saveInBackground(new SaveCallback() {
-                                                @Override
-                                                public void done(ParseException e) {
-                                                    ParseQuery query = ParseQuery.getQuery("Map");
-                                                    query.whereEqualTo("uploader", currentUser.getUsername());
-                                                    query.orderByDescending("createdAt");
-                                                    query.getFirstInBackground(new GetCallback() {
-                                                        @Override
-                                                        public void done(ParseObject parseObject, ParseException e) {
-                                                            for (int i = 0; i < imageList.size(); i++) {
-                                                                ParseObject imageUplaod = new ParseObject("ImageFiles");
-                                                                imageUplaod.put("geoPosition", ParseObject.createWithoutData("Map", parseObject.getObjectId()));
-                                                                imageUplaod.put("image", imageList.get(i));
-                                                                imageUplaod.saveInBackground(new SaveCallback() {
-                                                                    @Override
-                                                                    public void done(ParseException e) {
-                                                                        Log.e("Image done uploading", "DONE");
-                                                                    }
-                                                                });
-                                                            }
-                                                        }
-                                                    });
-                                                }
-                                            });
-                                            showImageUploadedToUser();
-                                        } else {
-                                            Toast.makeText(getApplicationContext(), "We need you to fill in the description aswell.", Toast.LENGTH_SHORT).show();
-                                            dialog_progress.setVisibility(View.GONE);
-                                            titleDialog.setVisibility(View.VISIBLE);
-                                            discriptionDialog.setVisibility(View.VISIBLE);
-                                        }
 
+                            //secondly checks if longitude and latitude has received values from the GPS
+                            if (marker.getPosition() != null) {
+                                if (!titleDialog.getText().toString().equals("")) {
+                                    if (!discriptionDialog.getText().toString().equals("")) {
+                                        //Set the name for the image to the date
+                                        Calendar c = Calendar.getInstance();
+                                        SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
+                                        final String imagename = df.format(c.getTime());
+                                        //random picture from the res catalogue
+                                        ParseGeoPoint userPoint = new ParseGeoPoint(marker.getPosition().latitude, marker.getPosition().longitude);
+                                        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                                        // Compress image to lower quality scale 1 - 100
+                                        rotatedCropped.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                                        byte[] image = stream.toByteArray();
+                                        //insert image to a ParseFile
+                                        file = new ParseFile(imagename + ".jpeg", image);
+                                        ParseObject upload = new ParseObject("Map");
+                                        upload.put("uploader", currentUser.getUsername());
+                                        upload.put("pointUploader", ParseObject.createWithoutData("_User", currentUser.getObjectId()));
+                                        upload.put("description", discriptionDialog.getText().toString());
+                                        upload.put("title", titleDialog.getText().toString());
+                                        upload.put("validate", true);
+                                        upload.put("geopoint", userPoint);
+                                        upload.put("size", imageList.size());
+                                        upload.saveInBackground(new SaveCallback() {
+                                            @Override
+                                            public void done(ParseException e) {
+                                                ParseQuery query = ParseQuery.getQuery("Map");
+                                                query.whereEqualTo("uploader", currentUser.getUsername());
+                                                query.orderByDescending("createdAt");
+                                                query.getFirstInBackground(new GetCallback() {
+                                                    @Override
+                                                    public void done(ParseObject parseObject, ParseException e) {
+                                                        for (int i = 0; i < imageList.size(); i++) {
+                                                            ParseObject imageUplaod = new ParseObject("ImageFiles");
+                                                            imageUplaod.put("geoPosition", ParseObject.createWithoutData("Map", parseObject.getObjectId()));
+                                                            imageUplaod.put("image", imageList.get(i));
+                                                            imageUplaod.saveInBackground(new SaveCallback() {
+                                                                @Override
+                                                                public void done(ParseException e) {
+
+                                                                }
+                                                            });
+                                                        }
+                                                    }
+                                                });
+                                            }
+                                        });
+                                        showImageUploadedToUser();
                                     } else {
-                                        Toast.makeText(getApplicationContext(), "Please set the title for this spot", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(), "We need you to fill in the description aswell.", Toast.LENGTH_SHORT).show();
                                         dialog_progress.setVisibility(View.GONE);
                                         titleDialog.setVisibility(View.VISIBLE);
                                         discriptionDialog.setVisibility(View.VISIBLE);
                                     }
 
                                 } else {
-                                    Toast.makeText(getApplicationContext(), "Please wait until your GPS received the location data.", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "Please set the title for this spot", Toast.LENGTH_SHORT).show();
                                     dialog_progress.setVisibility(View.GONE);
                                     titleDialog.setVisibility(View.VISIBLE);
                                     discriptionDialog.setVisibility(View.VISIBLE);
                                 }
+
                             } else {
-                                showGPSDisabledAlertToUser();
+                                Toast.makeText(getApplicationContext(), "Please wait until your GPS received the location data.", Toast.LENGTH_SHORT).show();
                                 dialog_progress.setVisibility(View.GONE);
                                 titleDialog.setVisibility(View.VISIBLE);
                                 discriptionDialog.setVisibility(View.VISIBLE);
                             }
+
 
                         }
 
